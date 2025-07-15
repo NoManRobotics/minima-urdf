@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<robot name="urdf_minima_pump" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find urdf_minima_pump_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find urdf_minima_pump_description)/urdf/urdf_minima_pump.trans" />
+<xacro:include filename="$(find urdf_minima_pump_description)/urdf/urdf_minima_pump.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.028239912623268335 0.00022897397265255766 0.022351581735481192" rpy="0 0 0"/>
+    <mass value="1.678664334320221"/>
+    <inertia ixx="0.001714" iyy="0.004366" izz="0.005221" ixy="1.5e-05" iyz="2e-06" ixz="-0.000109"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Joint1_v4_1">
+  <inertial>
+    <origin xyz="-0.00034052204176712454 0.0004560463703401332 0.012793551538439266" rpy="0 0 0"/>
+    <mass value="0.7598292010416028"/>
+    <inertia ixx="0.000574" iyy="0.000402" izz="0.000735" ixy="-0.0" iyz="-7e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.043" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint1_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.043" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint1_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Joint2_v4_1">
+  <inertial>
+    <origin xyz="-0.05185007849659991 0.02035044360694894 -0.0001437587115089567" rpy="0 0 0"/>
+    <mass value="0.6491358467224337"/>
+    <inertia ixx="0.000554" iyy="0.00077" izz="0.001111" ixy="-1.5e-05" iyz="2e-06" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-9e-06 0.023 -0.0758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint2_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-9e-06 0.023 -0.0758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint2_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Joint3_v5_1">
+  <inertial>
+    <origin xyz="0.02880516404447027 0.023483526277794722 0.0267193962835829" rpy="0 0 0"/>
+    <mass value="0.5326826980341239"/>
+    <inertia ixx="0.000447" iyy="0.000743" izz="0.000793" ixy="1.1e-05" iyz="2.2e-05" ixz="-0.000126"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.089991 0.023 -0.0758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint3_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.089991 0.023 -0.0758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint3_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Joint4_p_v2_1">
+  <inertial>
+    <origin xyz="0.0032249543497295616 0.02574256021275767 -5.92303983637521e-14" rpy="0 0 0"/>
+    <mass value="0.16387191590708247"/>
+    <inertia ixx="6e-05" iyy="2.5e-05" izz="5.8e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.007288 0.023 -0.1113" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint4_p_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.007288 0.023 -0.1113" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/Joint4_p_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pump_v1_1">
+  <inertial>
+    <origin xyz="0.019733592495933802 2.5613450000990776e-05 -0.009674186866012319" rpy="0 0 0"/>
+    <mass value="0.10173695025237381"/>
+    <inertia ixx="3.1e-05" iyy="3.9e-05" izz="1.8e-05" ixy="-0.0" iyz="0.0" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.010712 -0.0 -0.1113" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/pump_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.010712 -0.0 -0.1113" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find urdf_minima_pump_description)/meshes/pump_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute1" type="revolute">
+  <origin xyz="0.0 0.0 0.043" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Joint1_v4_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="10"/>
+</joint>
+
+<joint name="Revolute2" type="revolute">
+  <origin xyz="9e-06 -0.023 0.0328" rpy="0 0 0"/>
+  <parent link="Joint1_v4_1"/>
+  <child link="Joint2_v4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="2.96706" lower="0.0" effort="100" velocity="10"/>
+</joint>
+
+<joint name="Revolute3" type="revolute">
+  <origin xyz="-0.09 0.0 0.0" rpy="0 0 0"/>
+  <parent link="Joint2_v4_1"/>
+  <child link="Joint3_v5_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="6.283185" lower="4.18879" effort="100" velocity="10"/>
+</joint>
+
+<joint name="Revolute4" type="revolute">
+  <origin xyz="0.082703 0.0 0.0355" rpy="0 0 0"/>
+  <parent link="Joint3_v5_1"/>
+  <child link="Joint4_p_v2_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="10"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin xyz="0.018 0.023 0.0" rpy="0 0 0"/>
+  <parent link="Joint4_p_v2_1"/>
+  <child link="pump_v1_1"/>
+</joint>
+
+</robot>

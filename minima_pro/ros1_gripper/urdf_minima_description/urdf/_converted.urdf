@@ -1,0 +1,294 @@
+<?xml version="1.0" ?>
+<robot name="urdf_minima">
+  <material name="silver">
+    <color rgba="0.700 0.700 0.700 1.000"/>
+  </material>
+  <transmission name="Revolute1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Revolute1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Revolute1_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Revolute2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Revolute2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Revolute2_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Revolute3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Revolute3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Revolute3_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Revolute4_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Revolute4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Revolute4_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Slider5_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Slider5">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Slider5_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Slider6_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Slider6">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Slider6_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="control"/>
+  </gazebo>
+  <gazebo reference="base_link">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  <gazebo reference="Joint1_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Joint2_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Joint3_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Joint4_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Left_jaw_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Right_jaw_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.02823991262326837 0.00022897397265255698 0.022351581735481227"/>
+      <mass value="1.678664334320221"/>
+      <inertia ixx="0.001714" ixy="1.5e-05" ixz="-0.000109" iyy="0.004366" iyz="2e-06" izz="0.005221"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Joint1_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0004899836188121865 -2.028457349654231e-05 0.01739452757904985"/>
+      <mass value="0.5807379754603086"/>
+      <inertia ixx="0.000548" ixy="0.0" ixz="-2e-06" iyy="0.000328" iyz="-1e-06" izz="0.000644"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.043"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.043"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Joint2_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.047931940742029285 0.021374796556136878 -0.0002752579325002169"/>
+      <mass value="0.9393120598062463"/>
+      <inertia ixx="0.000699" ixy="2.2e-05" ixz="-8e-06" iyy="0.001059" iyz="-2e-06" izz="0.001475"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-9e-06 0.023 -0.0758"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-9e-06 0.023 -0.0758"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Joint3_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.03219247447396666 0.024730621406347183 0.027243680593609418"/>
+      <mass value="0.6716582497226395"/>
+      <inertia ixx="0.000534" ixy="-3.6e-05" ixz="-0.000165" iyy="0.000904" iyz="-1.8e-05" izz="0.000938"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.089991 0.0234 -0.0758"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.089991 0.0234 -0.0758"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Joint4_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.006206718183223721 0.019431340824144043 0.0005187204112082344"/>
+      <mass value="0.2244418833605674"/>
+      <inertia ixx="7.8e-05" ixy="-5e-06" ixz="1e-06" iyy="4.3e-05" iyz="-1e-06" izz="8.3e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.005288 0.023 -0.1113"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.005288 0.023 -0.1113"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Joint4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Left_jaw_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.008108481494467787 -0.017272948286088947 -4.186012048135179e-05"/>
+      <mass value="0.02963004226643892"/>
+      <inertia ixx="4e-06" ixy="0.0" ixz="-0.0" iyy="5e-06" iyz="0.0" izz="2e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.017195 -0.022573 -0.111274"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Left_jaw_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.017195 -0.022573 -0.111274"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Left_jaw_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Right_jaw_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.008104176209863142 0.017272234170332863 2.2827138208517117e-05"/>
+      <mass value="0.02965489098742322"/>
+      <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="5e-06" iyz="-0.0" izz="2e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.017195 0.022587 -0.111274"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Right_jaw_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.017195 0.022587 -0.111274"/>
+      <geometry>
+        <mesh filename="file://C:/Users/jwyhh/Desktop/minima-urdf/minima_pro/ros1_gripper/urdf_minima_description/meshes/Right_jaw_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Revolute1" type="revolute">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.043"/>
+    <parent link="base_link"/>
+    <child link="Joint1_1"/>
+    <axis xyz="0.0 -0.0 1.0"/>
+    <limit effort="100" lower="-1.570796" upper="1.570796" velocity="100"/>
+  </joint>
+  <joint name="Revolute2" type="revolute">
+    <origin rpy="0 0 0" xyz="9e-06 -0.023 0.0328"/>
+    <parent link="Joint1_1"/>
+    <child link="Joint2_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="100" lower="0.0" upper="2.96706" velocity="100"/>
+  </joint>
+  <joint name="Revolute3" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.09 -0.0004 0.0"/>
+    <parent link="Joint2_1"/>
+    <child link="Joint3_1"/>
+    <axis xyz="-0.0 1.0 0.0"/>
+    <limit effort="100" lower="4.18879" upper="6.283185" velocity="100"/>
+  </joint>
+  <joint name="Revolute4" type="revolute">
+    <origin rpy="0 0 0" xyz="0.084703 0.0004 0.0355"/>
+    <parent link="Joint3_1"/>
+    <child link="Joint4_1"/>
+    <axis xyz="-0.0 1.0 0.0"/>
+    <limit effort="100" lower="-1.570796" upper="1.570796" velocity="100"/>
+  </joint>
+  <joint name="Slider5" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.022483 0.045573 -2.6e-05"/>
+    <parent link="Joint4_1"/>
+    <child link="Left_jaw_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="100" lower="0.0" upper="0.008" velocity="100"/>
+  </joint>
+  <joint name="Slider6" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.022483 0.000413 -2.6e-05"/>
+    <parent link="Joint4_1"/>
+    <child link="Right_jaw_1"/>
+    <axis xyz="-0.0 -1.0 -0.0"/>
+    <limit effort="100" lower="0.0" upper="0.008" velocity="100"/>
+  </joint>
+</robot>
